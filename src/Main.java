@@ -16,6 +16,5 @@ public class Main {
 
         int classificacao = (int) notaDoFilme / 2;
         System.out.println(classificacao);
-        //cara sei la, bigodudo da upp
     }
 }
