@@ -19,34 +19,34 @@ public class DesafioAlura {
         while(!(sinal)){
             System.out.println("Digite a opção desejada!");
             System.out.println(
-                    "Opções\n\n"+
-                    "1 - Consultar Saldo\n" +
-                    "2 - Receber Valor\n" +
-                    "3 - Transferir Valor\n"+
-                    "4 - Sair do Programa\n");
+                    """
+                        Opções
+
+                        1 - Consultar Saldo
+                        2 - Receber Valor
+                        3 - Transferir Valor
+                        4 - Sair do Programa
+                        """);
             opcao = input.nextInt();
-            switch (opcao){
-                case 1:// checar saldo
-                    System.out.println("O seu saldo é de: " + saldo);
-                    break;
-                case 2:// receber valor
+            switch (opcao) {
+                case 1 ->// checar saldo
+                        System.out.println("O seu saldo é de: " + saldo);
+                case 2 -> {// receber valor
                     System.out.println("Digite o valor a receber!");
                     valor = input.nextDouble();
                     saldo += valor;
                     System.out.println("O seu novo saldo é de: " + saldo);
-                    break;
-                case 3:// transferir valor
+                }
+                case 3 -> {// transferir valor
                     System.out.println("Digite o valor a transferir!");
                     valor = input.nextDouble();
-                    if (valor < saldo){
+                    if (valor < saldo) {
                         saldo -= valor;
                         System.out.println("Transferencia feita com sucesso!");
                         System.out.println("O seu novo saldo é de: " + saldo);
                     } else System.out.println("Você não tem o saldo necessário para esta operação!");
-                    break;
-                case 4:
-                    sinal = true;
-                    break;
+                }
+                case 4 -> sinal = true;
             }
         }
         System.out.println("Obrigado pela preferencia!");
